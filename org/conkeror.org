@@ -20,10 +20,6 @@ Use M-w to copy the text to the clipboard. Use C-h b to see the full list of bin
 The key is to highlight the first component of your desired selection using i-Search.
 * DONE session
 * DONE alias webjumps
-* [1/3] windows (emacs frames)
-- [X] open in new: find-url-new-window follow-new-window
-- [ ] other-frame:
-- [ ] C-x 5 0 close frame:
 * INTERNET links
 - https://github.com/denlab/conkeror-saner-defaults/blob/master/.conkerorrc
 - chrome://conkeror-help/content/tutorial.html

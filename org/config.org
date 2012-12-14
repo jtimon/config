@@ -1,7 +1,7 @@
 #+TODO: INTERNET CONFIG PRACTICE | DONE REM
 
-* [0/1] install
-** PRACTICE ppa repositories (try to make it in one line)
+* [1/1] install
+** REM ppa repositories (try to make it in one line)
 sudo add-apt-repository ppa:cassou/emacs
 sudo add-apt-repository ppa:jd-team/jdownloader
 sudo add-apt-repository ppa:texlive-backports/ppa
@@ -30,6 +30,8 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/jtimon/config.git
 git push -u origin master
+** proxy
+git config --global http.proxy http://jtimon:password@proxy.indra.es:8080
 * [0/2] freicoin
 ** IRC
 jtimon_ (~quassel@209.pool85-53-130.dynamic.orange.es) has joined #freicoin
@@ -764,4 +766,31 @@ sendtoaddress <freicoinaddress> <amount> [comment] [comment-to]
 
 /home/jtimon/workspace/freicoin/src/freicoind gettransaction eb9528f5a22c97624fd272bd0b2f90d73a2b6dbb267c23067ff3dee2c8f67089
 
-
+* [0/2] Urgent
+** [0/5] emacs
+*** [/] Windows
+**** hide title bar
+**** start maximized
+*** INTERNET session opened frames and windows
+*** session opened shells
+*** CONFIG change .emacs location:
+	   - C-h v
+	   - user-emacs-directory
+*** INTERNET divide .emacs with includes:
+*** INTERNET links open with
+*** INTERNET mail
+*** [0/3] Annoying things
+**** INTERNET shells ask to close
+**** INTERNET shells session
+**** INTERNET Not kill client when killing opened file
+** [0/1] conkeror
+*** INTERNET [1/3] windows (emacs frames)
+- [X] open in new: find-url-new-window follow-new-window
+- [ ] other-frame:
+- [ ] C-x 5 0 close frame:
+*** rembember password
+** [0/1] git
+*** INTERNET github remember password
+* delete
+emacs Windows hide title bar
+emacs Windows start maximized

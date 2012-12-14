@@ -4,9 +4,9 @@
 
 // define_webjump("g", "http://www.google.com/search?q=%s");
 
-// webjumps.g = webjumps.google;
+webjumps.g = webjumps.google;
 // delete webjumps.google;
-// webjumps.w = webjumps.wikipedia;
+webjumps.w = webjumps.wikipedia;
 // delete webjumps.wikipedia;
 
 define_webjump("gi", "http://www.google.com/images?q=%s&safe=off", $alternative = "http://www.google.com/imghp?as_q=&safe=off");
@@ -112,13 +112,12 @@ clicks_in_new_buffer_button = 1;
 //////////////////////////////////////////
 // KEY MAPPINGS
 
-define_key(content_buffer_normal_keymap, "C-z", "restore-killed-buffer-url");
-
 define_key(content_buffer_normal_keymap, "f", "follow-new-buffer-background");
-define_key(content_buffer_normal_keymap, "C-f", "follow");
 // define_key(content_buffer_normal_keymap, "C-f", "follow-new-buffer");
 define_key(content_buffer_normal_keymap, "M-f", "follow-new-window");
+define_key(content_buffer_normal_keymap, "C-f", "follow");
+define_key(content_buffer_normal_keymap, "C-z", "restore-killed-buffer-url");
 
-define_key(content_buffer_normal_keymap, "g", "find-url-new-buffer");
-define_key(content_buffer_normal_keymap, "C-g", "find-url");
-define_key(content_buffer_normal_keymap, "M-g", "find-url-new-window");
+define_key(content_buffer_normal_keymap, "M-left", "buffer-previous");
+define_key(content_buffer_normal_keymap, "M-right", "buffer-next");
+

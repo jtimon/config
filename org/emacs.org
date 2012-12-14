@@ -51,14 +51,17 @@ http://www.masteringemacs.org
 ** open sudo files
 C-c C-f 
 /sudo::/etc/apt/sources.list
+** Code navigation
+| keystroke   | action                        | Eclipse      | command                            |
+|-------------+-------------------------------+--------------+------------------------------------|
+| C-c , .     | go to definition              | <F3>         | semantic-ia-fast-jump              |
+| C-c , P     | switch declaration/definition |              | semantic-analyze-proto-impl-toggle |
+| C-c , h     | in include, go to file        |              | semantic-decoration-include-visit  |
+| C-x C-space | go back                       | Alt + <left> | pop-global-mark                    |
 * To read
 http://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html#Init-File
 http://www.gnu.org/software/emacs/manual/html_node/emacs/Hooks.html#Hooks
 http://www.gnu.org/software/emacs/manual/html_node/emacs/Init-Examples.html#Init-Examples
-* [0/3] Annoying things
-** INTERNET shells ask to close
-** INTERNET shells session
-** INTERNET Not kill client when killing opened file
 * [0/1] Office
 ** org-mode
 ** INTERNET [1/3] spellchecking
@@ -142,7 +145,6 @@ http://emacs-ide.tuxfamily.org/
 http://www.emacswiki.org/CollectionOfEmacsDevelopmentEnvironmentTools
 http://cxwangyi.wordpress.com/2010/08/21/using-cedet-with-emacs/
 http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html
-
 * CEDET
 http://cedet.sourceforge.net/
 http://www.emacswiki.org/CollectionOfEmacsDevelopmentEnvironmentTools
@@ -162,22 +164,17 @@ http://ecb.sourceforge.net/
 http://stackoverflow.com/questions/8833235/install-ecb-with-emacs-starter-kit-in-emacs-24
 ** smart completion
 http://cedet.sourceforge.net/intellisense.shtml
-* Code navigation
-| keystroke   | action                        | Eclipse      | command                            |
-|-------------+-------------------------------+--------------+------------------------------------|
-| C-c , .     | go to definition              | <F3>         | semantic-ia-fast-jump              |
-| C-c , P     | switch declaration/definition |              | semantic-analyze-proto-impl-toggle |
-| C-c , h     | in include, go to file        |              | semantic-decoration-include-visit  |
-| C-x C-space | go back                       | Alt + <left> | pop-global-mark                    |
+* PRACTICE ediff
+emacs --eval "(ediff-files \"file_1\" \"file_2\")"
+emacsclient -diff todoNPA.org todoIndra.org
+emacsclient --eval "(ediff-files \"todoNPA.org\" \"todoIndra.org\")"
 
-* INTERNET [0/3] Urgent
-- [ ] open with
-- [ ] links open with
-- [ ] mail
-* INTERNET [0/6] Urgent
-- [ ] change .emacs location:
-- [ ] github
-- [ ] divide .emacs with includes:
-- [ ] session opened frames and windows
-- [ ] links open with
-- [ ] mail
+diff todoNPA.org todoIndra.org
+
+emacsclient -diff aaa.txt bbb.txt
+emacsclient --eval "(ediff-files \"aaa.txt\" \"bbb.txt\")"
+
+??
+emacsclient --eval "(emerge-files \"aaa.txt\" \"bbb.txt\" \"ccc.txt\")"
+
+
