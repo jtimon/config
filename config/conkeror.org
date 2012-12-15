@@ -1,0 +1,29 @@
+#+TODO: INTERNET CONFIG PRACTICE | REM DONE WAIT
+
+* rem
+** REM Changing the RC Location
+- M-:
+  user_pref('conkeror.rcfile', '/home/jtimon/config/conkeror.js');
+- or from the command line:
+  conkeror -q -batch -e "user_pref('conkeror.rcfile', '/home/jtimon/conkeror.js');"
+** REM select text
+In conkeror, the keyboard only method is first to i-Search for the text you want to copy. Once you see the light grey highlight over the first part of what you'd like to select, press Return. You may then use the following keybindings to select text:
+
+C-B -- one char back C-F -- one char forward M-B -- one word back M-F -- one word forward
+
+C-P -- back one line C-N -- forward one line S-down -- forward one line
+
+Notice that those are shifted characters, so it's really C-S-b etc.
+
+Use M-w to copy the text to the clipboard. Use C-h b to see the full list of bindings. Try searching for "Extend selection."
+
+The key is to highlight the first component of your desired selection using i-Search.
+* DONE session
+* DONE alias webjumps
+* INTERNET links
+- https://github.com/denlab/conkeror-saner-defaults/blob/master/.conkerorrc
+- chrome://conkeror-help/content/tutorial.html
+- http://www.google.com/search?q=conkerorrc%20doesn%27t%20load&ie=utf-8&oe=utf-8&aq=t
+- http://stackoverflow.com/questions/768263/what-does-your-conkerorrc-look-like
+- https://github.com/denlab/conkeror-saner-defaults/blob/master/.conkerorrc
+- http://bugs.conkeror.org/issue320

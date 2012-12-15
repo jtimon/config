@@ -1,0 +1,7 @@
+* Emacs
+** Dired
+| Action | Command          | Prompt         |
+|--------+------------------+----------------|
+| Open   | C-x d or C-x 4 d | directory name |
+|        |                  |                |
+

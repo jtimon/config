@@ -1,0 +1,21 @@
+#+TODO: INTERNET CONFIG PRACTICE | REM DONE WAIT
+
+* ratpoison
+** REM Rat Poison
+| Key Stroke | Action                   | emacs similar |
+|------------+--------------------------+---------------|
+| C-t s      | split frame horizontally | C-x 2         |
+| C-t S      | split frame vertically   | C-x 3         |
+| C-t w      | show windows             | C-x b         |
+| C-t <num>  | Go to window <num>       |               |
+| C-t n      | next window              | C-x <left>    |
+| C-t p      | previous window          | C-x <right>   |
+| C-t tab    | cycle through frames     | C-x o         |
+| C-t R      | Remove buffer            | C-x 0         |
+| C-t Q      | Only one frame           | C-x 1         |
+| C-t k      | Kill frame               | C-x k         |
+| C-t c      | Start terminal           |               |
+| C-t !      | Run command (terminal)   |               |
+| C-t :      | Run ratpoison command    |               |
+** REM ratpoison commands
+- quit
