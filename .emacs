@@ -163,23 +163,23 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PACKAGE REPOS
 
-(require 'package)
+;; (require 'package)
 
-;; Repositorios para paquetes
+;; ;; Repositorios para paquetes
 
-;; official GNU Emacs package repository. This repository contains the minimal set, most or all are FSF signed. Must be Free Software as defined by FSF.
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")) 
+;; ;; official GNU Emacs package repository. This repository contains the minimal set, most or all are FSF signed. Must be Free Software as defined by FSF.
+;; (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")) 
 
-;; ELPA (more extensive number of packages). Must be Debian definition of Free Software.
-(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/packages/"))
+;; ;; ELPA (more extensive number of packages). Must be Debian definition of Free Software.
+;; (add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/packages/"))
 
-;; Marmalade (probably most extensive number of packages)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;; ;; Marmalade (probably most extensive number of packages)
+;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
-;; melpa. Another one. Seems to be as extensive as Marmalade but more well-maintained.
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+;; ;; melpa. Another one. Seems to be as extensive as Marmalade but more well-maintained.
+;; (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
-(package-initialize)
+;; (package-initialize)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -201,7 +201,7 @@
 ;; ORG-MODE 
 
 ;; org-mode export latex with syntax highlight
-(require 'org-latex)
+;; (require 'org-latex)
 ;(setq org-export-latex-listings 'minted)
 ;(add-to-list 'org-export-latex-packages-alist '("" "minted"))
 
@@ -217,50 +217,80 @@
 
 ;; http://lwn.net/Articles/502119/
 
-(require 'cedet)
-(require 'semantic)
-(require 'srecode)
- ;;(require 'auto-complete-config)
+;; (require 'cedet)
+;; (require 'semantic)
+;; (require 'srecode)
+;;  ;;(require 'auto-complete-config)
 
-;; ;; Turn on project management.
+;; ;; ;; Turn on project management.
 
-;; (setq ede-locate-setup-options '(ede-locate-global ede-locate-locate ede-locate-base))
-(global-ede-mode 1)
-(global-srecode-minor-mode 1)
+;; ;; (setq ede-locate-setup-options '(ede-locate-global ede-locate-locate ede-locate-base))
+;; (global-ede-mode 1)
+;; (global-srecode-minor-mode 1)
 
-;; ;; Kick off the semantic bovinator, function menu, C-warning mode, and flashing
-;; ;; brackets.
+;; ;; ;; Kick off the semantic bovinator, function menu, C-warning mode, and flashing
+;; ;; ;; brackets.
 
-;; (setq semantic-default-submodes (append semantic-default-submodes
-;;                                         '(global-semantic-idle-local-symbol-highlight-mode
-;;                                           global-semantic-idle-summary-mode
-;;                                           global-semantic-decoration-mode
-;;                                           global-semantic-highlight-func-mode
-;;                                           global-semantic-stickyfunc-mode
-;;                                           global-semantic-show-unmatched-syntax-mode
-;;                                           global-semantic-mru-bookmark-mode)))
+;; ;; (setq semantic-default-submodes (append semantic-default-submodes
+;; ;;                                         '(global-semantic-idle-local-symbol-highlight-mode
+;; ;;                                           global-semantic-idle-summary-mode
+;; ;;                                           global-semantic-decoration-mode
+;; ;;                                           global-semantic-highlight-func-mode
+;; ;;                                           global-semantic-stickyfunc-mode
+;; ;;                                           global-semantic-show-unmatched-syntax-mode
+;; ;;                                           global-semantic-mru-bookmark-mode)))
 
-;; (setq semantic-decoration-styles '(("semantic-decoration-on-includes" . t)
-;;                                    ("semantic-decoration-on-protected-members")
-;;                                    ("semantic-decoration-on-private-members")))
+;; ;; (setq semantic-decoration-styles '(("semantic-decoration-on-includes" . t)
+;; ;;                                    ("semantic-decoration-on-protected-members")
+;; ;;                                    ("semantic-decoration-on-private-members")))
 
-(semantic-mode 1)
-(semanticdb-enable-gnu-global-databases 'c-mode)
-(semanticdb-enable-gnu-global-databases 'c++-mode)
+;; (semantic-mode 1)
+;; (semanticdb-enable-gnu-global-databases 'c-mode)
+;; (semanticdb-enable-gnu-global-databases 'c++-mode)
 
-;; ;; auto-complete should use Semantic.
+;; ;; ;; auto-complete should use Semantic.
 
-;; ;;(ac-config-default)
-;; ;;(ac-set-trigger-key "TAB")
+;; ;; ;;(ac-config-default)
+;; ;; ;;(ac-set-trigger-key "TAB")
 
-(defun nix-setup-auto-complete-semantic ()
-   "Arrange to do semantic autocompletion."
-   (add-to-list 'ac-sources 'ac-source-semantic))
+;; (defun nix-setup-auto-complete-semantic ()
+;;    "Arrange to do semantic autocompletion."
+;;    (add-to-list 'ac-sources 'ac-source-semantic))
 
-(add-hook 'c-mode-common-hook 'nix-setup-auto-complete-semantic t)
+;; (add-hook 'c-mode-common-hook 'nix-setup-auto-complete-semantic t)
 
-;; Yasnippet code templates
-(yas-global-mode 1)
+;; ;; Yasnippet code templates
+;; (yas-global-mode 1)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; OPEN WITH
+
+    ;; (when (require 'openwith nil 'noerror)
+    ;;   (setq openwith-associations
+    ;;         (list
+    ;;          (list (openwith-make-extension-regexp
+    ;;                 '("mpg" "mpeg" "mp3" "mp4"
+    ;;                   "avi" "wmv" "wav" "mov" "flv"
+    ;;                   "ogm" "ogg" "mkv"))
+    ;;                "vlc"
+    ;;                '(file))
+    ;;          ;; (list (openwith-make-extension-regexp
+    ;;          ;;        '("xbm" "pbm" "pgm" "ppm" "pnm"
+    ;;          ;;          "png" "gif" "bmp" "tif" "jpeg" "jpg"))
+    ;;          ;;       "geeqie"
+    ;;          ;;       '(file))
+    ;;          (list (openwith-make-extension-regexp
+    ;;                 '("doc" "xls" "ppt" "odt" "ods" "odg" "odp"))
+    ;;                "libreoffice"
+    ;;                '(file))
+    ;;          ;; '("\\.lyx" "lyx" (file))
+    ;;          ;; '("\\.chm" "kchmviewer" (file))
+    ;;          (list (openwith-make-extension-regexp
+    ;;                 '("pdf" "ps" "ps.gz" "dvi"))
+    ;;                "evince"
+    ;;                '(file))
+    ;;          ))
+    ;;   (openwith-mode 1))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; TESTING
@@ -268,36 +298,6 @@
 ;; open files as sudo
 ;; (require 'tramp)
 ;; (setq tramp-default-method "scp")
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; OPEN WITH
-
-    (when (require 'openwith nil 'noerror)
-      (setq openwith-associations
-            (list
-             (list (openwith-make-extension-regexp
-                    '("mpg" "mpeg" "mp3" "mp4"
-                      "avi" "wmv" "wav" "mov" "flv"
-                      "ogm" "ogg" "mkv"))
-                   "vlc"
-                   '(file))
-             ;; (list (openwith-make-extension-regexp
-             ;;        '("xbm" "pbm" "pgm" "ppm" "pnm"
-             ;;          "png" "gif" "bmp" "tif" "jpeg" "jpg"))
-             ;;       "geeqie"
-             ;;       '(file))
-             (list (openwith-make-extension-regexp
-                    '("doc" "xls" "ppt" "odt" "ods" "odg" "odp"))
-                   "libreoffice"
-                   '(file))
-             ;; '("\\.lyx" "lyx" (file))
-             ;; '("\\.chm" "kchmviewer" (file))
-             (list (openwith-make-extension-regexp
-                    '("pdf" "ps" "ps.gz" "dvi"))
-                   "evince"
-                   '(file))
-             ))
-      (openwith-mode 1))
  
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; KEY MAPPINGS
@@ -314,11 +314,11 @@
 
 (global-set-key "\C-ci"  'irc)
 
-(define-key semantic-mode-map (kbd "C-c , .") 'semantic-ia-fast-jump)
-(define-key semantic-mode-map [f3] 'semantic-ia-fast-jump)
+;; (define-key semantic-mode-map (kbd "C-c , .") 'semantic-ia-fast-jump)
+;; (define-key semantic-mode-map [f3] 'semantic-ia-fast-jump)
 
-(define-key semantic-mode-map (kbd "C-c , P") 'semantic-analyze-proto-impl-toggle)
-(define-key semantic-mode-map (kbd "C-c , h") 'semantic-decoration-include-visit)
+;; (define-key semantic-mode-map (kbd "C-c , P") 'semantic-analyze-proto-impl-toggle)
+;; (define-key semantic-mode-map (kbd "C-c , h") 'semantic-decoration-include-visit)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -334,3 +334,4 @@
         :port 6667
         :nick "jtimon"
         :password ""))
+
