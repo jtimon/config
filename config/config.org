@@ -770,12 +770,16 @@ sendtoaddress <freicoinaddress> <amount> [comment] [comment-to]
 
 
 /home/jtimon/workspace/freicoin/src/freicoind gettransaction eb9528f5a22c97624fd272bd0b2f90d73a2b6dbb267c23067ff3dee2c8f67089
-
+* windows
+** customize keys
+** [0/5] emacs
+*** hide title bar
+*** start maximized
+** windows manager
+- http://sourceforge.net/projects/virtuawin/forums/forum/257054
+- http://virtuawin.sourceforge.net/?page_id=9
 * [0/2] Urgent
 ** [0/5] emacs
-*** [/] Windows
-**** hide title bar
-**** start maximized
 *** INTERNET session opened frames and windows
 *** session opened shells
 *** CONFIG change .emacs location:
@@ -797,8 +801,3 @@ sendtoaddress <freicoinaddress> <amount> [comment] [comment-to]
 *** rembember passwords
 ** [0/1] git
 *** INTERNET github remember password
-** windows
-- [ ] customize keys
-* delete
-emacs Windows hide title bar
-emacs Windows start maximized

@@ -19,3 +19,9 @@
 | C-t :      | Run ratpoison command    |               |
 ** REM ratpoison commands
 - quit
+* qtile
+sudo apt-add-repository ppa:tycho-s/ppa 
+sudo apt-get update 
+sudo apt-get install qtile 
+mkdir -p ~/.config/qtile 
+curl https://raw.github.com/qtile/qtile/master/libqtile/resources/default_config.py > ~/.config/qtile/config.py 
