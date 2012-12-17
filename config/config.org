@@ -1,19 +1,30 @@
 #+TODO: INTERNET CONFIG PRACTICE | DONE REM
 
-* [1/1] install
-** REM ppa repositories (try to make it in one line)
-sudo add-apt-repository ppa:cassou/emacs
-sudo add-apt-repository ppa:jd-team/jdownloader
-sudo add-apt-repository ppa:texlive-backports/ppa
-sudo add-apt-repository ppa:aking1012-com/aircrack-precise
-sudo add-apt-repository ppa:indicator-multiload/stable-daily
-** first apt-get
-sudo apt-get install guake indicator-multiload emacs24 emacs24-el emacs24-common-non-dfsg git vlc exaile kolourpaint chromium gparted gdebi jdownloader aircrack-ng texlive-full
-** suspend keyboard
-- sudo apt-get install powermanagement-interface hal
-- pmi action suspend
-- create shortcut
-* git
+* CONFIG Xmodmap
+* CONFIG [0/1] Urgent
+** [0/1] git
+*** INTERNET github remember password
+** [0/5] emacs
+*** INTERNET session opened frames and windows
+*** session opened shells
+*** CONFIG change .emacs location:
+	   - C-h v
+	   - user-emacs-directory
+*** INTERNET divide .emacs with includes:
+*** INTERNET links open with
+*** INTERNET mail
+*** [0/3] Annoying things
+**** INTERNET shells ask to close
+**** INTERNET shells session
+**** INTERNET Not kill client when killing opened file
+** [0/1] conkeror
+*** INTERNET [1/3] windows (emacs frames)
+- [X] open in new: find-url-new-window follow-new-window
+- [ ] other-frame:
+- [ ] C-x 5 0 close frame:
+	C-x 5 0 is bound to the command delete-window 
+*** rembember passwords
+* PRACTICE git
 ** config
 git config --global user.name "jtimon"
 git config --global user.email "jtimonmv@gmail.com"
@@ -37,7 +48,63 @@ cd ~
 git init
 git remote add origin https://github.com/jtimon/config.git
 git pull origin master
-* [0/2] freicoin
+* INTERNET windows
+** customize keys
+** [0/5] emacs
+*** hide title bar
+*** start maximized
+** windows manager
+- http://sourceforge.net/projects/virtuawin/forums/forum/257054
+- http://virtuawin.sourceforge.net/?page_id=9
+* CONFIG [0/2] freicoin
+** sudo add-apt-repository ppa:freicoin/testing
+** sudo apt-get install freicoind freicoin-qt
+** sudo add-apt-repository ppa:bitcoin/bitcoin
+** sudo apt-get install libdb4.8-dev libboost-dev libminiupnpc-dev
+** sudo apt-get install libmpfr-dev libgmp-dev
+** find and download db-4.8.30.NC.tar.gz
+tar -xf db-4.8.30.NC.tar.gz
+pushd db-4.8.30.NC/src/db-4.8.30.NC/build_unix
+../dist/configure --host=x86_64-pc-linux-gnu --enable-cxx
+make && make install
+** CONFIG Vamos por aqui
+
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/sbin" ldconfig -n /usr/local/BerkeleyDB.4.8/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/BerkeleyDB.4.8/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+include /etc/ld.so.conf.d/*.conf
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+*** maaku:
+
+depends on where it was installed
+but yes, I would try adding it to the path with CFLAGS
+or editing the makefile directly
+** CONFIG make -f makefile.unix
+** Test
+/home/jtimon/workspace/freicoin/src/freicoind -daemon
+
+
+sendtoaddress <freicoinaddress> <amount> [comment] [comment-to]
+
+/home/jtimon/workspace/freicoin/src/freicoind sendtoaddress 1DUDHrfNgzb4ks7PhMgHxcxzBNBmqprtXf 10 aaaaa
+
+
+/home/jtimon/workspace/freicoin/src/freicoind gettransaction eb9528f5a22c97624fd272bd0b2f90d73a2b6dbb267c23067ff3dee2c8f67089
 ** IRC
 jtimon_ (~quassel@209.pool85-53-130.dynamic.orange.es) has joined #freicoin
 Mode #freicoin +cnt by cameron.freenode.net
@@ -722,82 +789,16 @@ jtimon_ (~quassel@114.Red-83-46-39.dynamicIP.rima-tde.net) has quit (No Ping rep
 jtimon (~quassel@114.Red-83-46-39.dynamicIP.rima-tde.net) has joined #freicoin
 Mode #freicoin +cnt by morgan.freenode.net
 Channel #freicoin created on Thu Jul 5 21:31:04 2012
-** sudo add-apt-repository ppa:freicoin/testing
-** sudo apt-get install freicoind freicoin-qt
-** sudo add-apt-repository ppa:bitcoin/bitcoin
-** sudo apt-get install libdb4.8-dev libboost-dev libminiupnpc-dev
-** sudo apt-get install libmpfr-dev libgmp-dev
-** find and download db-4.8.30.NC.tar.gz
-tar -xf db-4.8.30.NC.tar.gz
-pushd db-4.8.30.NC/src/db-4.8.30.NC/build_unix
-../dist/configure --host=x86_64-pc-linux-gnu --enable-cxx
-make && make install
-** CONFIG Vamos por aqui
-
-libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/sbin" ldconfig -n /usr/local/BerkeleyDB.4.8/lib
-----------------------------------------------------------------------
-Libraries have been installed in:
-   /usr/local/BerkeleyDB.4.8/lib
-
-If you ever happen to want to link against installed libraries
-in a given directory, LIBDIR, you must either use libtool, and
-specify the full pathname of the library, or use the `-LLIBDIR'
-flag during linking and do at least one of the following:
-   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
-     during execution
-   - add LIBDIR to the `LD_RUN_PATH' environment variable
-     during linking
-   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
-   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
-
-include /etc/ld.so.conf.d/*.conf
-
-See any operating system documentation about shared libraries for
-more information, such as the ld(1) and ld.so(8) manual pages.
-*** maaku:
-
-depends on where it was installed
-but yes, I would try adding it to the path with CFLAGS
-or editing the makefile directly
-** CONFIG make -f makefile.unix
-** Test
-/home/jtimon/workspace/freicoin/src/freicoind -daemon
-
-
-sendtoaddress <freicoinaddress> <amount> [comment] [comment-to]
-
-/home/jtimon/workspace/freicoin/src/freicoind sendtoaddress 1DUDHrfNgzb4ks7PhMgHxcxzBNBmqprtXf 10 aaaaa
-
-
-/home/jtimon/workspace/freicoin/src/freicoind gettransaction eb9528f5a22c97624fd272bd0b2f90d73a2b6dbb267c23067ff3dee2c8f67089
-* windows
-** customize keys
-** [0/5] emacs
-*** hide title bar
-*** start maximized
-** windows manager
-- http://sourceforge.net/projects/virtuawin/forums/forum/257054
-- http://virtuawin.sourceforge.net/?page_id=9
-* [0/2] Urgent
-** [0/5] emacs
-*** INTERNET session opened frames and windows
-*** session opened shells
-*** CONFIG change .emacs location:
-	   - C-h v
-	   - user-emacs-directory
-*** INTERNET divide .emacs with includes:
-*** INTERNET links open with
-*** INTERNET mail
-*** [0/3] Annoying things
-**** INTERNET shells ask to close
-**** INTERNET shells session
-**** INTERNET Not kill client when killing opened file
-** [0/1] conkeror
-*** INTERNET [1/3] windows (emacs frames)
-- [X] open in new: find-url-new-window follow-new-window
-- [ ] other-frame:
-- [ ] C-x 5 0 close frame:
-	C-x 5 0 is bound to the command delete-window 
-*** rembember passwords
-** [0/1] git
-*** INTERNET github remember password
+* REM [1/1] install
+** REM ppa repositories (try to make it in one line)
+sudo add-apt-repository ppa:cassou/emacs
+sudo add-apt-repository ppa:jd-team/jdownloader
+sudo add-apt-repository ppa:texlive-backports/ppa
+sudo add-apt-repository ppa:aking1012-com/aircrack-precise
+sudo add-apt-repository ppa:indicator-multiload/stable-daily
+** first apt-get
+sudo apt-get install guake indicator-multiload emacs24 emacs24-el emacs24-common-non-dfsg git vlc exaile kolourpaint chromium gparted gdebi jdownloader aircrack-ng texlive-full
+** suspend keyboard
+- sudo apt-get install powermanagement-interface hal
+- pmi action suspend
+- create shortcut
