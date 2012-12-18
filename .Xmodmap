@@ -50,7 +50,7 @@ keycode  33 = p P p P thorn THORN
 keycode  34 = bracketleft braceleft dead_grave dead_circumflex bracketleft dead_abovering
 keycode  35 = bracketright braceright plus asterisk bracketright dead_macron
 keycode  36 = Return NoSymbol Return
-! keycode  37 = Control_L Control_L Control_L
+keycode  37 = Control_L Control_L Control_L
 keycode  38 = a A aacute Aacute aacute Aacute
 keycode  39 = s S s S ssharp section
 keycode  40 = d D d D eth ETH
@@ -79,7 +79,7 @@ keycode  62 = Shift_R NoSymbol Shift_R
 keycode  63 = KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply XF86ClearGrab KP_Multiply KP_Multiply XF86ClearGrab
 keycode  64 = Alt_L Meta_L Alt_L Meta_L
 keycode  65 = space NoSymbol space
-keycode  66 = Control_L Control_L Control_L Control_L
+! keycode  66 = Control_L Control_L Control_L Control_L
 keycode  67 = F1 F1 F1 F1 F1 F1 XF86Switch_VT_1 F1 F1 XF86Switch_VT_1
 keycode  68 = F2 F2 F2 F2 F2 F2 XF86Switch_VT_2 F2 F2 XF86Switch_VT_2
 keycode  69 = F3 F3 F3 F3 F3 F3 XF86Switch_VT_3 F3 F3 XF86Switch_VT_3
@@ -222,7 +222,7 @@ keycode 202 =
 ! keycode 203 = Mode_switch NoSymbol Mode_switch
 keycode 204 = NoSymbol Alt_L NoSymbol Alt_L
 keycode 205 = NoSymbol Meta_L NoSymbol Meta_L
-keycode 206 = NoSymbol Super_L NoSymbol Super_L
+keycode 206 = NoSymbol Super_R NoSymbol Super_R
 keycode 207 = NoSymbol Hyper_L NoSymbol Hyper_L
 keycode 208 = XF86AudioPlay NoSymbol XF86AudioPlay
 keycode 209 = XF86AudioPause NoSymbol XF86AudioPause
@@ -275,36 +275,35 @@ keycode 255 =
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Num_Lock Meta_L Meta_R ?????????
 
+! clear the ones you don't use first
+clear mod2
+clear mod3
+clear mod5
+
+! always clear before add
 clear shift
 add shift   = Shift_L Shift_R
 
-! clear control
-! add control = Control_L Control_R
-!add control = Control_L
-! add control = Control_R
+clear control
+add control = Control_L Control_R
+clear mod1
+add mod1 = Alt_L Alt_R
 
-! ! clear lock
-! clear mod1
-! clear mod2
-! clear mod3
-! clear mod4
-! clear mod5
+clear lock
+add lock = Mode_switch
 
-! ! add lock    = Caps_Lock
-! ! add lock    = Mode_switch
-! add mod1    = Alt_L Mode_switch Alt_R
-! add mod2    = Mode_switch
-! ! add mod2    = Mode_switch
-! ! add mod3    = Num_Lock
-! add mod4    = Super_L
-! ! add mod5    = Meta_L Meta_R 
+clear mod4
+add mod4    = Super_L Super_R
 
-! ! shift       Shift_L (0x32),  Shift_R (0x3e)
-! ! lock        Control_L (0x42),  Mode_switch (0x76),  Mode_switch (0xcb)
-! ! control     Control_L (0x25),  Control_R (0x69),  Super_R (0x86)
-! ! mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
-! ! mod2        Num_Lock (0x4d)
-! ! mod3      
-! ! mod4        Super_L (0x85),  Super_L (0xce),  Hyper_L (0xcf)
-! ! mod5        ISO_Level3_Shift (0x5c)
+! xmodmap -pm (before changes)
+!----------------------------------------------------------------------------
+! shift       Shift_L (0x32),  Shift_R (0x3e)
+! lock        Control_L (0x42),  Mode_switch (0x76),  Mode_switch (0xcb)
+! control     Control_L (0x25),  Control_R (0x69),  Super_R (0x86)
+! mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)
+! mod2        Num_Lock (0x4d)
+! mod3      
+! mod4        Super_L (0x85),  Super_L (0xce),  Hyper_L (0xcf)
+! mod5        ISO_Level3_Shift (0x5c)
