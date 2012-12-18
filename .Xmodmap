@@ -79,7 +79,7 @@ keycode  62 = Shift_R NoSymbol Shift_R
 keycode  63 = KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply XF86ClearGrab KP_Multiply KP_Multiply XF86ClearGrab
 keycode  64 = Alt_L Meta_L Alt_L Meta_L
 keycode  65 = space NoSymbol space
-! keycode  66 = Control_L Control_L Control_L Control_L
+keycode  66 = Control_L Control_L Control_L Control_L
 keycode  67 = F1 F1 F1 F1 F1 F1 XF86Switch_VT_1 F1 F1 XF86Switch_VT_1
 keycode  68 = F2 F2 F2 F2 F2 F2 XF86Switch_VT_2 F2 F2 XF86Switch_VT_2
 keycode  69 = F3 F3 F3 F3 F3 F3 XF86Switch_VT_3 F3 F3 XF86Switch_VT_3
@@ -118,7 +118,7 @@ keycode 101 = Hiragana_Katakana NoSymbol Hiragana_Katakana
 keycode 102 = Muhenkan NoSymbol Muhenkan
 keycode 103 =
 keycode 104 = KP_Enter NoSymbol KP_Enter
-! keycode 105 = Control_R NoSymbol Control_R
+keycode 105 = Control_R NoSymbol Control_R
 keycode 106 = KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide XF86Ungrab KP_Divide KP_Divide XF86Ungrab
 keycode 107 = Print Sys_Req Print Sys_Req
 ! keycode 108 = Alt_R Meta_R ISO_Level3_Shift
@@ -222,7 +222,7 @@ keycode 202 =
 ! keycode 203 = Mode_switch NoSymbol Mode_switch
 keycode 204 = NoSymbol Alt_L NoSymbol Alt_L
 keycode 205 = NoSymbol Meta_L NoSymbol Meta_L
-keycode 206 = NoSymbol Super_R NoSymbol Super_R
+keycode 206 = NoSymbol Super_L NoSymbol Super_L
 keycode 207 = NoSymbol Hyper_L NoSymbol Hyper_L
 keycode 208 = XF86AudioPlay NoSymbol XF86AudioPlay
 keycode 209 = XF86AudioPause NoSymbol XF86AudioPause
@@ -282,7 +282,7 @@ clear mod2
 clear mod3
 clear mod5
 
-! always clear before add
+! always clear before adding
 clear shift
 add shift   = Shift_L Shift_R
 

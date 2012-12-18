@@ -83,10 +83,10 @@ bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+# bindsym $mod+7 workspace 7
+# bindsym $mod+8 workspace 8
+# bindsym $mod+9 workspace 9
+# bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+exclam move workspace 1
@@ -95,10 +95,10 @@ bindsym $mod+Shift+numbersign move workspace 3
 bindsym $mod+Shift+dollar move workspace 4
 bindsym $mod+Shift+percent move workspace 5
 bindsym $mod+Shift+asciicircum move workspace 6
-bindsym $mod+Shift+ampersand move workspace 7
-bindsym $mod+Shift+asterisk move workspace 8
-bindsym $mod+Shift+parenleft move workspace 9
-bindsym $mod+Shift+parenright move workspace 10
+# bindsym $mod+Shift+ampersand move workspace 7
+# bindsym $mod+Shift+asterisk move workspace 8
+# bindsym $mod+Shift+parenleft move workspace 9
+# bindsym $mod+Shift+parenright move workspace 10
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -155,16 +155,31 @@ bar {
 # xrandr  --output LVDS1 --off
 
 exec xrandr  --output LVDS1 --off
-exec emacs
+exec emacs workspace 1
+exec conkeror workspace 2
 
 bindsym Mod1+Tab focus right
 bindsym Mod1+Shift+Tab focus left
 
+# workspace <next|prev|next_on_output|prev_on_output>
+# workspace <name>
+# workspace number <name>
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
-bindsym $mod+Shift+S exec sudo pm-suspend
-bindsym $mod+Shift+H exec sudo pm-hibernate
+# move [window|container] [to] workspace <name>
+# move [window|container] [to] workspace number <name>
+# move [window|container] [to] workspace <prev|next|current>
+
+# TODO this doesn't work neither with symbols at the right of numbers nor letters
+# bindsym $mod+Shift+ampersand exec sudo pm-suspend
+# # move workspace 7
+# bindsym $mod+Shift+asterisk exec sudo reboot now
+# # move workspace 8
+# bindsym $mod+Shift+parenleft exec sudo shutdown now
+# # was move workspace 9
+# bindsym $mod+Shift+parenright exec sudo pm-hibernate
+# # was move workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -176,10 +191,3 @@ bindsym $mod+Shift+E exit
 # workspace back_and_forth
 
 
-# workspace <next|prev|next_on_output|prev_on_output>
-# workspace <name>
-# workspace number <name>
-
-# move [window|container] [to] workspace <name>
-# move [window|container] [to] workspace number <name>
-# move [window|container] [to] workspace <prev|next|current>
