@@ -4,20 +4,29 @@ from libqtile import layout, bar, widget
 
 keys = [
     # Switch between windows in current stack pane
-    Key(
-        ["mod4"], "k",
-        lazy.layout.down()
-    ),
-    Key(
-        ["mod4"], "j",
-        lazy.layout.up()
-    ),
+    # Key(
+    #     ["mod4"], "k",
+    #     lazy.layout.down()
+    # ),
+    # Key(
+    #     ["mod4"], "j",
+    #     lazy.layout.up()
+    # ),
 
+    # Move windows up or down in current stack
+    Key(
+        ["mod1", "control"], "k",
+        lazy.layout.shuffle_down()
+    ),
+    Key(
+        ["mod1", "control"], "j",
+        lazy.layout.shuffle_up()
+    ),
 
 # MOVEMENT KEYS
     # windows style alt-tab/alt-shift-tab
-    Key([alt], "Tab", lazy.layout.next()),
-    Key([alt, "shift"], "Tab", lazy.layout.previous()),
+    Key(["mod1"], "Tab", lazy.layout.down()),
+    Key(["mod1", "shift"], "Tab", lazy.layout.up()),
 
     # # Move windows up or down in current stack
     # Key(
@@ -55,7 +64,7 @@ keys = [
 
     # Toggle between different layouts as defined below
     Key(["mod4"], "Tab",    lazy.nextlayout()),
-    Key(["mod4"], "w",      lazy.window.kill()),
+    Key(["mod4", "shift"], "q",      lazy.window.kill()),
 
     Key(["mod4", "control"], "r", lazy.restart()),
 ]
@@ -66,11 +75,11 @@ groups = [
     Group("3"),
     Group("4"),
     Group("5"),
-    Group("6"),
-    Group("7"),
-    Group("8"),
-    Group("9"),
-    Group("0"),
+    # Group("6"),
+    # Group("7"),
+    # Group("8"),
+    # Group("9"),
+    # Group("0"),
 ]
 for i in groups:
     # mod4 + letter of group = switch to group
@@ -85,12 +94,12 @@ for i in groups:
 
 layouts = [
     layout.Max(),
-    layout.Stack(stacks=2)
+    layout.Stack(stacks=5)
 ]
 
 screens = [
     Screen(
-        bottom = bar.Bar(
+        top = bar.Bar(
                     [
                         widget.GroupBox(),
                         widget.WindowName(),
