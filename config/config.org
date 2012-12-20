@@ -30,7 +30,16 @@
 git config --global user.name "jtimon"
 git config --global user.email "jtimonmv@gmail.com"
 git config --global credential.helper cache
-git config --global credential.helper 'cache --timeout=3600'
+git config --global credential.helper cache --timeout=3600
+** remember login
+_netrc file on HOME with contents:
+machine <hostname1>
+login <login1>
+password <password1>
+machine <hostname2>
+login <login2>
+password <password2>
+http://stackoverflow.com/questions/6031214/git-how-to-use-netrc-file-on-windows-to-save-user-and-password/6031266#6031266
 ** projects
 https://github.com/jtimon/freicoin.git
 https://github.com/jtimon/villagescc.git
