@@ -49,6 +49,18 @@ cd ~
 git init
 git remote add origin https://github.com/jtimon/config.git
 git pull origin master
+** Normal workflow
+git pull origin master
+[changes]
+git add chagedFile
+git commit -m "message for the newly added files"
+git push -u origin master
+** If you commit before pulling
+git branch newbranch <last commit id>
+git checkout master
+git pull origin master
+git merge newbranch
+git push -u origin master
 * INTERNET windows
 ** customize keys
 ** [0/5] emacs
