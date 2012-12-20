@@ -4,16 +4,18 @@
 * CONFIG [0/1] Urgent
 ** [0/1] git
 *** INTERNET github remember password
-** [0/6] emacs
-*** INTERNET session opened frames and windows
-*** session opened shells
-*** CONFIG change .emacs location:
-	   - C-h v
-	   - user-emacs-directory
+*** chose an emacs git tool or the standard vc support and learn it
+** [0/5] emacs
+*** ediff
+**** faster way to compare to 2 files than typing their paths, also dired = doesn't seem to be using ediff
+**** Use it for git
+*** INTERNET session
+**** opened frames and windows
+**** session opened shells
 *** CONFIG emacsclient -c
 *** INTERNET divide .emacs with includes:
 *** INTERNET links open with
-*** INTERNET mail
+*** INTERNET mail gnus or fetch
 *** [0/3] Annoying things
 **** INTERNET shells ask to close
 **** INTERNET shells session
