@@ -4,12 +4,13 @@
 * CONFIG [0/1] Urgent
 ** [0/1] git
 *** INTERNET github remember password
-** [0/5] emacs
+** [0/6] emacs
 *** INTERNET session opened frames and windows
 *** session opened shells
 *** CONFIG change .emacs location:
 	   - C-h v
 	   - user-emacs-directory
+*** CONFIG emacsclient -c
 *** INTERNET divide .emacs with includes:
 *** INTERNET links open with
 *** INTERNET mail
@@ -56,6 +57,8 @@ git pull origin master
 ** windows manager
 - http://sourceforge.net/projects/virtuawin/forums/forum/257054
 - http://virtuawin.sourceforge.net/?page_id=9
+** INTERNET open with... parameters to programs
+emacsclient -c
 * CONFIG [0/2] freicoin
 ** sudo add-apt-repository ppa:freicoin/testing
 ** sudo apt-get install freicoind freicoin-qt
