@@ -1,6 +1,7 @@
 #+TODO: INTERNET CONFIG PRACTICE | DONE REM
 
 * CONFIG Xmodmap
+** Put more keys on xmodmap, like ¿ ¡ and dead ` ~ ^ ´
 * CONFIG [0/1] Urgent
 ** [0/1] git
 *** INTERNET github remember password
