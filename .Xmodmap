@@ -17,32 +17,30 @@
 ! 6 AltGr+Shift+Key 
 ! http://wiki.linuxquestions.org/wiki/List_of_Keysyms_Recognised_by_Xmodmap
 
-! dead_acute
-
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 keycode   8 =
 keycode   9 = Escape NoSymbol Escape
-keycode  10 = 1 exclam 1 exclam bar exclamdown
-keycode  11 = 2 at 2 quotedbl at oneeighth
+keycode  10 = 1 exclam exclamdown exclam bar exclamdown
+keycode  11 = 2 at exclam quotedbl at oneeighth
 keycode  12 = 3 numbersign 3 periodcentered numbersign sterling
-keycode  13 = 4 dollar 4 dollar asciitilde dollar
-keycode  14 = 5 percent 5 percent onehalf threeeighths
-keycode  15 = 6 asciicircum 6 ampersand notsign fiveeighths
+keycode  13 = 4 dollar cent copyright
+keycode  14 = 5 percent EuroSign percent onehalf threeeighths
+keycode  15 = 6 asciicircum 6 dead_circumflex notsign fiveeighths
 keycode  16 = 7 ampersand 7 slash braceleft seveneighths
 keycode  17 = 8 asterisk 8 parenleft bracketleft trademark
 keycode  18 = 9 parenleft 9 parenright bracketright plusminus
-keycode  19 = 0 parenright 0 equal braceright degree
+keycode  19 = 0 parenright masculine ordfeminine braceright degree
 keycode  20 = minus underscore apostrophe question backslash questiondown
 keycode  21 = equal plus exclamdown questiondown dead_tilde asciitilde
-keycode  22 = BackSpace BackSpace BackSpace BackSpace
+keycode  22 = BackSpace Delete Delete BackSpace 
 keycode  23 = Tab ISO_Left_Tab Tab ISO_Left_Tab
 keycode  24 = q Q q Q at Greek_OMEGA
 keycode  25 = w W w W lstroke Lstroke
 keycode  26 = e E eacute Eacute eacute Eacute
 keycode  27 = r R r R paragraph registered
 keycode  28 = t T t T tslash Tslash
-keycode  29 = y Y y Y leftarrow yen
+keycode  29 = y Y udiaeresis Udiaeresis leftarrow yen
 keycode  30 = u U uacute Uacute uacute Uacute
 keycode  31 = i I iacute Iacute iacute Iacute
 keycode  32 = o O oacute Oacute oacute Oacute
@@ -62,19 +60,19 @@ keycode  45 = k K k K kra ampersand
 keycode  46 = l L l L lstroke Lstroke
 keycode  47 = semicolon colon ntilde Ntilde asciitilde dead_doubleacute
 keycode  48 = apostrophe quotedbl dead_acute dead_diaeresis braceleft braceleft
-keycode  49 = grave asciitilde masculine ordfeminine backslash backslash
+keycode  49 = grave asciitilde dead_grave dead_tilde backslash backslash
 keycode  50 = Shift_L NoSymbol Shift_L
 keycode  51 = backslash bar ccedilla Ccedilla braceright dead_breve
 keycode  52 = z Z z Z guillemotleft less
 keycode  53 = x X x X guillemotright greater
-keycode  54 = c C c C cent copyright
+keycode  54 = c C ccedilla Ccedilla
 keycode  55 = v V v V leftdoublequotemark leftsinglequotemark
 keycode  56 = b B b B rightdoublequotemark rightsinglequotemark
 keycode  57 = n N ntilde Ntilde ntilde Ntilde
 keycode  58 = m M m M mu masculine
 keycode  59 = comma less comma semicolon horizconnector multiply
-keycode  60 = period greater period colon periodcentered division
-keycode  61 = slash question minus underscore dead_belowdot dead_abovedot
+keycode  60 = period greater questiondown colon periodcentered division
+keycode  61 = slash question question underscore dead_belowdot dead_abovedot
 keycode  62 = Shift_R NoSymbol Shift_R
 keycode  63 = KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply XF86ClearGrab KP_Multiply KP_Multiply XF86ClearGrab
 keycode  64 = Alt_L Meta_L Alt_L Meta_L
@@ -277,24 +275,20 @@ keycode 255 =
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Num_Lock Meta_L Meta_R ?????????
 
-! clear the ones you don't use first
+! clear first
+clear shift
+clear control
+clear mod1
 clear mod2
 clear mod3
-clear mod5
-
-! always clear before adding
-clear shift
-add shift   = Shift_L Shift_R
-
-clear control
-add control = Control_L Control_R
-clear mod1
-add mod1 = Alt_L Alt_R
-
-clear lock
-add lock = Mode_switch
-
 clear mod4
+clear mod5
+clear lock
+
+add shift   = Shift_L Shift_R
+add control = Control_L Control_R
+add mod1 = Alt_L Alt_R
+! add mod2 = Mode_switch
 add mod4    = Super_L Super_R
 
 ! xmodmap -pm (before changes)
