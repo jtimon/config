@@ -2,52 +2,57 @@ from libqtile.manager import Key, Screen, Group
 from libqtile.command import lazy
 from libqtile import layout, bar, widget
 
+shift_key = "shift"
+control_key = "control"
+alt_key = "mod1"
+super_key = "mod4"
+
 keys = [
     # Switch between windows in current stack pane
     # Key(
-    #     ["mod4"], "k",
+    #     [super_key], "k",
     #     lazy.layout.down()
     # ),
     # Key(
-    #     ["mod4"], "j",
+    #     [super_key], "j",
     #     lazy.layout.up()
     # ),
 
     # Move windows up or down in current stack
     Key(
-        ["mod1", "control"], "k",
+        [alt_key, control_key], "k",
         lazy.layout.shuffle_down()
     ),
     Key(
-        ["mod1", "control"], "j",
+        [alt_key, control_key], "j",
         lazy.layout.shuffle_up()
     ),
 
 # MOVEMENT KEYS
     # windows style alt-tab/alt-shift-tab
-    Key(["mod1"], "Tab", lazy.layout.down()),
-    Key(["mod1", "shift"], "Tab", lazy.layout.up()),
+    Key([alt_key], "Tab", lazy.layout.down()),
+    Key([alt_key, shift_key], "Tab", lazy.layout.up()),
 
     # # Move windows up or down in current stack
     # Key(
-    #     ["mod1", "Tab"], 
+    #     [alt_key, "Tab"], 
     #     lazy.layout.shuffle_down()
     # ),
     # Key(
-    #     ["mod1", "shift", "Tab"], 
-    #     # ["mod4", "control"], "j",
+    #     [alt_key, shift_key, "Tab"], 
+    #     # [super_key, control_key], "j",
     #     lazy.layout.shuffle_up()
     # ),
 
     # Switch window focus to other pane(s) of stack
     Key(
-        ["mod4"], "space",
+        [super_key], "space",
         lazy.layout.next()
     ),
 
     # Swap panes of split stack
     Key(
-        ["mod4", "shift"], "space",
+        [super_key, shift_key], "space",
         lazy.layout.rotate()
     ),
 
@@ -55,18 +60,18 @@ keys = [
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with multiple stack panes
     Key(
-        ["mod4", "shift"], "Return",
+        [super_key, shift_key], "Return",
         lazy.layout.toggle_split()
     ),
-    Key(["mod4"], "h",      lazy.to_screen(1)),
-    Key(["mod4"], "l",      lazy.to_screen(0)),
-    Key(["mod4"], "Return", lazy.spawn("xterm")),
+    Key([super_key], "h",      lazy.to_screen(1)),
+    Key([super_key], "l",      lazy.to_screen(0)),
+    Key([super_key], "Return", lazy.spawn("xterm")),
 
     # Toggle between different layouts as defined below
-    Key(["mod4"], "Tab",    lazy.nextlayout()),
-    Key(["mod4", "shift"], "q",      lazy.window.kill()),
+    Key([super_key], "Tab",    lazy.nextlayout()),
+    Key([super_key, shift_key], "q", lazy.window.kill()),
 
-    Key(["mod4", "control"], "r", lazy.restart()),
+    Key([super_key, control_key], "r", lazy.restart()),
 ]
 
 groups = [
@@ -84,12 +89,12 @@ groups = [
 for i in groups:
     # mod4 + letter of group = switch to group
     keys.append(
-        Key(["mod4"], i.name, lazy.group[i.name].toscreen())
+        Key([super_key], i.name, lazy.group[i.name].toscreen())
     )
 
     # mod4 + shift + letter of group = switch to & move focused window to group
     keys.append(
-        Key(["mod4", "shift"], i.name, lazy.window.togroup(i.name))
+        Key([super_key, shift_key], i.name, lazy.window.togroup(i.name))
     )
 
 layouts = [

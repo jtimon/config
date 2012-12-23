@@ -61,7 +61,6 @@ keycode  47 = semicolon colon ntilde Ntilde asciitilde dead_doubleacute
 keycode  48 = apostrophe quotedbl dead_acute dead_diaeresis braceleft braceleft
 keycode  49 = grave asciitilde dead_grave dead_tilde backslash backslash
 keycode  50 = Shift_L NoSymbol Shift_L
-keycode  51 = backslash bar ccedilla Ccedilla braceright dead_breve
 keycode  52 = z Z z Z guillemotleft less
 keycode  53 = x X x X guillemotright greater
 keycode  54 = c C ccedilla Ccedilla
@@ -69,9 +68,6 @@ keycode  55 = v V v V leftdoublequotemark leftsinglequotemark
 keycode  56 = b B b B rightdoublequotemark rightsinglequotemark
 keycode  57 = n N ntilde Ntilde ntilde Ntilde
 keycode  58 = m M m M mu masculine
-keycode  59 = comma less comma semicolon horizconnector multiply
-keycode  60 = period greater questiondown colon periodcentered division
-keycode  61 = slash question question underscore dead_belowdot dead_abovedot
 keycode  62 = Shift_R NoSymbol Shift_R
 keycode  63 = KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply XF86ClearGrab KP_Multiply KP_Multiply XF86ClearGrab
 keycode  64 = Alt_L Meta_L Alt_L Meta_L
@@ -119,12 +115,12 @@ keycode 106 = KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide XF86Un
 keycode 107 = Print Sys_Req Print Sys_Req
 keycode 109 = Linefeed NoSymbol Linefeed
 keycode 110 = Home NoSymbol Home
-keycode 111 = Up NoSymbol Up
+keycode 111 = Up Up Up Up
 keycode 112 = Prior NoSymbol Prior
-keycode 113 = Left NoSymbol Left
-keycode 114 = Right NoSymbol Right
+keycode 113 = Left Left Left Left
+keycode 114 = Right Right Right Right
 keycode 115 = End NoSymbol End
-keycode 116 = Down NoSymbol Down
+keycode 116 = Down Down Down Down
 keycode 117 = Next NoSymbol Next
 keycode 119 = Delete NoSymbol Delete
 keycode 120 =
@@ -140,7 +136,6 @@ keycode 129 = KP_Decimal KP_Decimal KP_Decimal KP_Decimal
 keycode 130 = Hangul NoSymbol Hangul
 keycode 131 = Hangul_Hanja NoSymbol Hangul_Hanja
 keycode 132 =
-keycode 133 = Super_L NoSymbol Super_L
 keycode 136 = Cancel NoSymbol Cancel
 keycode 137 = Redo NoSymbol Redo
 keycode 138 = SunProps NoSymbol SunProps
@@ -209,6 +204,7 @@ keycode 200 = XF86TouchpadOn NoSymbol XF86TouchpadOn
 keycode 201 = XF86TouchpadOff NoSymbol XF86TouchpadOff
 keycode 202 =
 ! keycode 203 = Mode_switch NoSymbol Mode_switch
+keycode 204 = NoSymbol Alt_L NoSymbol Alt_L
 keycode 205 = NoSymbol Meta_L NoSymbol Meta_L
 keycode 206 = NoSymbol Super_L NoSymbol Super_L
 keycode 207 = NoSymbol Hyper_L NoSymbol Hyper_L
@@ -261,21 +257,40 @@ keycode 253 =
 keycode 254 =
 keycode 255 =
 
-keycode  37 = Control_L Control_L Control_L
-! was caps_lock
+! keycode  59 = comma less comma semicolon horizconnector multiply
+! keycode  60 = period greater period colon periodcentered division
+keycode  59 = comma less questiondown comma semicolon horizconnector multiply
+keycode  60 = period greater question colon periodcentered division
 
+! keycode  51 = slash bar backslash question
+! keycode  51 = backslash bar ccedilla Ccedilla braceright dead_breve
+keycode  51 = slash bar backslash
+! keycode  61 = slash question minus underscore dead_belowdot dead_abovedot
+! keycode  61 = Mode_switch Mode_switch Mode_switch Mode_switch
+keycode  61 = Super_L Super_L Super_L Super_L
+
+! keycode  37 = Control_L Control_L Control_L
 ! keycode  66 = Caps_Lock Caps_Lock Caps_Lock Caps_Lock 
-keycode  66 = Control_L Control_L Control_L Control_L
+keycode  37 = Super_L Super_L Super_L Super_L
+! keycode  37 = Mode_switch Mode_switch Mode_switch Mode_switch
+keycode  66 = Super_L Super_L Super_L Super_L
 
-keycode 134 = Control_R NoSymbol Control_R
-
-keycode 204 = NoSymbol Alt_L NoSymbol Alt_L
+! keycode  64 = Alt_L Meta_L Alt_L Meta_L
 ! keycode 108 = Alt_R Meta_R ISO_Level3_Shift
-keycode 108 = Mode_switch Mode_switch Mode_switch
+! keycode 108 = Mode_switch Mode_switch Mode_switch
+keycode  64 = Control_L Control_L Control_L Control_L
+keycode 108 = Control_R Control_R Control_R Control_R
+
+! keycode 133 = Super_L NoSymbol Super_L
+! keycode 134 xs= Control_R NoSymbol Control_R
+keycode 133 = Alt_L Alt_L Alt_L Alt_L
+! keycode 134 = Alt_R Alt_R Alt_R Alt_R
+keycode 134 = Mode_switch Mode_switch Mode_switch Mode_switch
 
 keycode 135 = Menu NoSymbol Menu
 ! keycode 118 = Insert NoSymbol Insert
 keycode 118 = Menu Menu Insert
+
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -292,8 +307,10 @@ clear lock
 add shift   = Shift_L Shift_R
 add control = Control_L Control_R
 add mod1 = Alt_L Alt_R
-add mod4    = Super_L Super_R
-! add mod2 = Mode_switch
+add mod2 = Num_Lock
+add mod3 = Mode_switch
+add mod4 = Super_L Super_R
+
 
 ! xmodmap -pm (before changes)
 !----------------------------------------------------------------------------
