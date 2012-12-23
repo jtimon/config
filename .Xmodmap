@@ -60,7 +60,6 @@ keycode  46 = l L l L lstroke Lstroke
 keycode  47 = semicolon colon ntilde Ntilde asciitilde dead_doubleacute
 keycode  48 = apostrophe quotedbl dead_acute dead_diaeresis braceleft braceleft
 keycode  49 = grave asciitilde dead_grave dead_tilde backslash backslash
-keycode  50 = Shift_L NoSymbol Shift_L
 keycode  52 = z Z z Z guillemotleft less
 keycode  53 = x X x X guillemotright greater
 keycode  54 = c C ccedilla Ccedilla
@@ -68,7 +67,6 @@ keycode  55 = v V v V leftdoublequotemark leftsinglequotemark
 keycode  56 = b B b B rightdoublequotemark rightsinglequotemark
 keycode  57 = n N ntilde Ntilde ntilde Ntilde
 keycode  58 = m M m M mu masculine
-keycode  62 = Shift_R NoSymbol Shift_R
 keycode  63 = KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply KP_Multiply XF86ClearGrab KP_Multiply KP_Multiply XF86ClearGrab
 keycode  64 = Alt_L Meta_L Alt_L Meta_L
 keycode  65 = space NoSymbol space
@@ -99,7 +97,6 @@ keycode  90 = KP_Insert KP_0 KP_Insert KP_0
 keycode  91 = KP_Delete KP_Decimal KP_Delete KP_Decimal
 keycode  92 = ISO_Level3_Shift NoSymbol ISO_Level3_Shift
 keycode  93 =
-keycode  94 = less greater less greater bar brokenbar bar brokenbar
 keycode  95 = F11 F11 F11 F11 F11 F11 XF86Switch_VT_11 F11 F11 XF86Switch_VT_11
 keycode  96 = F12 F12 F12 F12 F12 F12 XF86Switch_VT_12 F12 F12 XF86Switch_VT_12
 keycode  97 =
@@ -110,7 +107,6 @@ keycode 101 = Hiragana_Katakana NoSymbol Hiragana_Katakana
 keycode 102 = Muhenkan NoSymbol Muhenkan
 keycode 103 =
 keycode 104 = KP_Enter NoSymbol KP_Enter
-keycode 105 = Control_R NoSymbol Control_R
 keycode 106 = KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide XF86Ungrab KP_Divide KP_Divide XF86Ungrab
 keycode 107 = Print Sys_Req Print Sys_Req
 keycode 109 = Linefeed NoSymbol Linefeed
@@ -260,14 +256,20 @@ keycode 255 =
 ! keycode  59 = comma less comma semicolon horizconnector multiply
 ! keycode  60 = period greater period colon periodcentered division
 keycode  59 = comma less questiondown comma semicolon horizconnector multiply
-keycode  60 = period greater question colon periodcentered division
+keycode  60 = period greater questiondown colon periodcentered division
 
 ! keycode  51 = slash bar backslash question
-! keycode  51 = backslash bar ccedilla Ccedilla braceright dead_breve
-keycode  51 = slash bar backslash
-! keycode  61 = slash question minus underscore dead_belowdot dead_abovedot
+! keycode  61 = Super_L Super_L Super_L Super_L
 ! keycode  61 = Mode_switch Mode_switch Mode_switch Mode_switch
-keycode  61 = Super_L Super_L Super_L Super_L
+keycode  51 = backslash bar ccedilla Ccedilla braceright dead_breve
+keycode  61 = slash question question underscore dead_belowdot dead_abovedot
+
+! keycode  51 = slash bar backslash
+
+keycode  50 = Shift_L NoSymbol Shift_L
+keycode  62 = Shift_R NoSymbol Shift_R
+! keycode 94 = less greater less greater bar brokenbar bar brokenbar
+keycode 94 = Shift_R Shift_R Shift_R Shift_R
 
 ! keycode  37 = Control_L Control_L Control_L
 ! keycode  66 = Caps_Lock Caps_Lock Caps_Lock Caps_Lock 
@@ -282,14 +284,16 @@ keycode  64 = Control_L Control_L Control_L Control_L
 keycode 108 = Control_R Control_R Control_R Control_R
 
 ! keycode 133 = Super_L NoSymbol Super_L
-! keycode 134 xs= Control_R NoSymbol Control_R
+! keycode 134 = Control_R NoSymbol Control_R
 keycode 133 = Alt_L Alt_L Alt_L Alt_L
 ! keycode 134 = Alt_R Alt_R Alt_R Alt_R
 keycode 134 = Mode_switch Mode_switch Mode_switch Mode_switch
 
-keycode 135 = Menu NoSymbol Menu
+! keycode 135 = Menu NoSymbol Menu
+keycode 135 = Mode_switch Mode_switch Mode_switch Mode_switch
 ! keycode 118 = Insert NoSymbol Insert
 keycode 118 = Menu Menu Insert
+keycode 105 = Control_R NoSymbol Control_R
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
