@@ -101,7 +101,7 @@ http://www.emacswiki.org/emacs/ErcBasics
 - /QUIT msg – disconnect and leave message msg for all to see
 *** More
 http://www.irchelp.org/irchelp/irctutorial.html
-- /NAMES #channel-name
+- /NAMES #freicoin
 - /WHOIS nickname
 - /HELP
 ** INTERNET web gmail -> gnus/fetch

@@ -1,7 +1,7 @@
 #+TODO: INTERNET CONFIG PRACTICE | DONE REM
 
-* CONFIG Xmodmap
-** Put more keys on xmodmap, like ¿ ¡ and dead ` ~ ^ ´
+* Xmodmap
+** DONE Put more keys on xmodmap, like ¿ ¡ and dead ` ~ ^ ´
 * CONFIG [0/1] Urgent
 ** [0/1] git
 *** INTERNET github remember password
@@ -95,7 +95,7 @@ pushd db-4.8.30.NC/src/db-4.8.30.NC/build_unix
 ../dist/configure --host=x86_64-pc-linux-gnu --enable-cxx
 make && make install
 ** CONFIG Vamos por aqui
-
+ 
 libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/sbin" ldconfig -n /usr/local/BerkeleyDB.4.8/lib
 ----------------------------------------------------------------------
 Libraries have been installed in:
