@@ -163,23 +163,23 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PACKAGE REPOS
 
-;; (require 'package)
+(require 'package)
 
-;; ;; Repositorios para paquetes
+;; Repositorios para paquetes
 
-;; ;; official GNU Emacs package repository. This repository contains the minimal set, most or all are FSF signed. Must be Free Software as defined by FSF.
-;; (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")) 
+;; official GNU Emacs package repository. This repository contains the minimal set, most or all are FSF signed. Must be Free Software as defined by FSF.
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")) 
 
-;; ;; ELPA (more extensive number of packages). Must be Debian definition of Free Software.
-;; (add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/packages/"))
+;; ELPA (more extensive number of packages). Must be Debian definition of Free Software.
+(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/packages/"))
 
-;; ;; Marmalade (probably most extensive number of packages)
-;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;; Marmalade (probably most extensive number of packages)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
-;; ;; melpa. Another one. Seems to be as extensive as Marmalade but more well-maintained.
-;; (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+;; melpa. Another one. Seems to be as extensive as Marmalade but more well-maintained.
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
-;; (package-initialize)
+(package-initialize)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -286,9 +286,9 @@
 		 ;; '("\\.lyx" "lyx" (file))
 		 ;; '("\\.chm" "kchmviewer" (file))
 		 (list (openwith-make-extension-regexp
-				'("torrent"))
-			   "transmission-gtk"
-			   '(file))
+		 		'("torrent"))
+		 	   "transmission-gtk"
+		 	   '(file))
 		 (list (openwith-make-extension-regexp
 				'("pdf" "ps" "ps.gz" "dvi"))
 			   "evince"
