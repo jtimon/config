@@ -6,7 +6,7 @@
 ** [0/1] git
 *** INTERNET github remember password
 *** chose an emacs git tool or the standard vc support and learn it
-** [0/5] emacs
+** [1/5] emacs
 *** ediff
 **** faster way to compare to 2 files than typing their paths, also dired = doesn't seem to be using ediff
 **** Use it for git
@@ -14,7 +14,8 @@
 **** opened frames and windows
 **** session opened shells
 *** CONFIG emacsclient -c
-*** INTERNET divide .emacs with includes:
+*** DONE divide .emacs with includes:
+(load-file "~/private/emacs.el")
 *** INTERNET links open with
 *** INTERNET mail gnus or fetch
 *** [0/3] Annoying things

@@ -328,14 +328,4 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PERSONAL
 
-(setq user-mail-address "jtimonmv@gmail.com")
-
-;; IRC
- (defun irc ()
-   "Connect to the freenode"
-   (interactive)
-   (erc :server "irc.freenode.net"
-        :port 6667
-        :nick "jtimon"
-        :password ""))
-
+(load-file "~/private/emacs.el")
