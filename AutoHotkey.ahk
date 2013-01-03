@@ -32,3 +32,11 @@
 ; # win
 ; ^ Control
 ; ! Alt
+
+LAlt::LCtrl
+RAlt::RCtrl
+
+LWin::LAlt
+RWin::RAlt
+
+CapsLock::LWin
