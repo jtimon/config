@@ -830,3 +830,11 @@ sudo apt-get install guake indicator-multiload emacs24 emacs24-el emacs24-common
 - sudo apt-get install powermanagement-interface hal
 - pmi action suspend
 - create shortcut
+* node
+npm config set proxy http://user:pass@proxy.indra.es:8080
+* angular
+node ./scripts/web-server.js
+scripts\test.bat
+git checkout -f step-6
+http://localhost:8000/app/index.html
+http://localhost:8000/test/e2e/runner.html
