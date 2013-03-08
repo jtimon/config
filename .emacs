@@ -88,7 +88,7 @@
 ;; CHANGED DEFAULTS
 
 ;; Tab width 4.
-(setq-default tab-width 4)
+(setq-default tab-width 2)
 
 ;; disabling prompts emacs
 ;; http://www.masteringemacs.org/articles/2010/11/14/disabling-prompts-emacs/
@@ -136,7 +136,7 @@
 ;; Toggle with 'M-o'
 ;; http://www.emacswiki.org/emacs/DiredOmitMode
 (require 'dired-x)
-    (setq-default dired-omit-files-p t) ; this is buffer-local variable
+    (setq-default dired-omit-files-p nil) ; this is buffer-local variable
     (setq dired-omit-files
           (concat dired-omit-files "\\|^\\..+$"))
 
