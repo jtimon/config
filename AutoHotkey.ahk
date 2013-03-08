@@ -33,10 +33,14 @@
 ; ^ Control
 ; ! Alt
 
-LAlt::LCtrl
-RAlt::RCtrl
+CapsLock::LWin
 
 LWin::LAlt
 RWin::RAlt
 
-CapsLock::LWin
+LAlt::LCtrl
+RAlt::RCtrl
+
+
+
+
